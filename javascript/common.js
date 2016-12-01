@@ -18,20 +18,19 @@ $(document).ready(function() {
         hour = now.getHours(),
         $greetings = $(".greeting");
     
-    if (hour > 0) {
+    if (hour > 16) {
         $greetings.hide();
-        $('.g4').css('display', 'block');
-    } else if (hour > 7) {
-        $greetings.hide();
-        $('.g1').css('display', 'block');
+        $('.g3').css('display', 'block');
     } else if (hour > 12) {
         $greetings.hide();
         $('.g2').css('display', 'block');
-    } else if (hour > 16) {
+    } else if (hour > 7) {
         $greetings.hide();
-        $('.g3').css('display', 'block');
+        $('.g1').css('display', 'block');
+    } else {
+        $greetings.hide();
+        $('.g4').css('display', 'block');
     }
-    
     
    var $skillbar = $(".skillbar");
     var current = $window.scrollTop(),
