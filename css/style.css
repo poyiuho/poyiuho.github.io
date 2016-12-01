@@ -9,6 +9,7 @@ body {
 
 .section {
     height: 100vh;
+    width: 100%;
 }
 
 #header {
@@ -221,7 +222,7 @@ body {
 #class {
     background: url("../img/sun.jpeg") 100% 0 repeat fixed;
     position: relative;
-    width: 100vw;
+    width: 100%;
 }
 
 #slider {
@@ -229,7 +230,7 @@ body {
 }
 
 .pdf {
-    position: relative;
+    position: absolute;
     margin: 0;
     width: 50vw;
     height: 100vh;
@@ -237,6 +238,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
+    display: inline-block;
     display: none;
 }
 
@@ -247,6 +249,8 @@ body {
     padding: 15px;
     line-height: 20vh;
     height: 20vh;
+    font-weight: 900;
+    border-bottom: 3px solid white;
 }
 
 .obj {
@@ -257,14 +261,123 @@ body {
     width: 50vw;
 }
 
+.controls {
+    top: 50%;
+    position: absolute;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: 5px solid white;
+    font-size: 26px;
+    font-weight: bolder;
+    height: 20vh;
+    width: 10vw;
+    padding: 10px;
+    margin: 10px;
+}
+
+#prev {
+    left: 10%;
+}
+
+#next {
+    right: 10%;
+}
+
 #experience {
-    
+    background: url(../img/kellyquad.jpeg) 100% 0 repeat fixed;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+#website img {
+    height: 75vh;
+    width: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+#website {
+    width: 50%;
+    float: left;
+}
+
+#worktitle {
+    text-align: center;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.85);
+    font-size: 56px;
+    padding: 30px;
+    margin-bottom: 25px;
+}
+
+#worktitle:before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    bottom: 5px;
+    left: 50%;
+    opacity: 0.77;
+    transform: translateX(-50%);
+    border-bottom: 10px solid black;
+}
+
+#tba {
+    color: white;
+    font-weight: 900;
+    font-size: 56px;
+    text-align: center;
+    top: 30%;
+    position: relative;
 }
 
 #contact {
-    
+    background: #F0EEEE 100% 0 repeat fixed;
+    color: black;
+    height: 20vh;
+    position: relative;
+    width: 100%;
 }
 
-#made {
-    
+#concon {
+    width: 100%;
+    height: 10vh;
+}
+
+#social {
+    color: white;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+}
+
+#social a {
+    color: black;
+    margin: 10px;
+}
+
+#info {
+    width: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+#info p a {
+    color: black;
+    text-decoration: none;
+}
+
+#made p {
+    text-align: center;
+    width: 100%;
+    float: left;
+    position: relative;
 }
