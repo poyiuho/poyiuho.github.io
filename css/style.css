@@ -1,0 +1,173 @@
+* {
+    font-family: 'Raleway', sans-serif;
+    margin: 0 auto;
+}
+
+body {
+    margin: 0 auto;
+}
+
+.section {
+    height: 85vh;
+}
+
+#header {
+    height: 20vh;
+    width: 100%;
+    position: absolute;
+    color: white;
+    margin: 0 auto;
+}
+
+#header ul {
+    text-align: center;
+    position: relative;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    letter-spacing: 5px;
+    font-size: 20px;
+    display: table;
+    margin: 0;
+    padding: 0;
+}
+
+#header ul li {
+    display: table-cell;
+    text-align: center;
+    font-weight: 900;
+    width: 14.5%;
+}
+
+#header ul li p {
+    display: block;
+    text-align: center;
+    font-weight: 900;
+    font-family: 'Aref Ruqaa', sans-serif;
+}
+
+#name {
+    color: white;
+}
+
+#home {
+    background: url("../img/frisbee.jpeg") 75% 0 repeat fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    color: white;
+}
+
+#wrapped {
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+#wrapped h2 {
+    letter-spacing: 25px;
+    font-size: 60px;
+    font-weight: 700;
+    padding-bottom: 30px;
+}
+
+#about {
+    background: #F0EEEE 100% 0 repeat fixed;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+#mediv {
+    height: 100vh;
+    width: 50vw;
+    position: relative;
+    float: left;
+}
+
+#me {
+    height: 100%;
+    width: auto;
+    position: absolute;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-box-shadow:0 23px 17px 0 #9F8641;
+    -moz-box-shadow:0 23px 17px 0 #9F8641;
+    box-shadow: 0 23px 17px 0 #9F8641;
+}
+
+#aboutme {
+    background-color: white;
+    position: absolute;
+    width: 50%;
+    padding: 30px;
+    top: 50%;
+    left: 35%;
+    transform: translateY(-50%);
+}
+
+.hello {
+    font-size: 30px;
+    padding: 30px;
+    margin: 20px;
+    position: relative;
+}
+
+.hello:before {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 1px;
+    bottom: 0;
+    opacity: 0.5;
+    border-bottom: 1px solid black;
+}
+
+#aboutme p {
+    margin: 10px;
+    padding: 30px;
+}
+
+#skills {
+    background: #F0EEEE 75% 0 repeat fixed;
+    position: relative;
+}
+
+#skillset h2 {
+    padding: 30px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#skillset ul {
+    list-style: none;
+    position: relative;
+    
+}
+
+#skillset ul li {
+    margin: 30px;
+    background-color: rgba(100, 100, 100, 0.4);
+}
+
+#class {
+    background: url("../img/sun.jpeg") 100% 0 repeat fixed;
+}
+
+#experience {
+    
+}
+
+#contact {
+    
+}
+
+#made {
+    
+}
