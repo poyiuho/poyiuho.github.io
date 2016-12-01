@@ -1,23 +1,63 @@
 $(document).ready(function() {
     var $window = $(window),
-        $home = $('#home');
+        $magic = $('.magic');
     
-    $(window).scroll(function() {
-        var yPos = -($window.scrollTop() / 10);
-        var coords = '50%' + yPos + 'px';
-        
-        $home.css({
-            backgroundPosition: coords
+    $magic.each(function() {
+        var $this = $(this);
+        $(window).scroll(function() {
+            var yPos = -($window.scrollTop() / 10);
+            var coords = '50%' + yPos + 'px';
+
+            $this.css({
+                backgroundPosition: coords
+            });
         });
-    });
+    })
+    
+    var now = new Date(Date.now()),
+        hour = now.getHours(),
+        $greetings = $(".greeting");
+    
+    if (hour > 0) {
+        $greetings.hide();
+        $('.g4').css('display', 'block');
+    } else if (hour > 7) {
+        $greetings.hide();
+        $('.g1').css('display', 'block');
+    } else if (hour > 12) {
+        $greetings.hide();
+        $('.g2').css('display', 'block');
+    } else if (hour > 16) {
+        $greetings.hide();
+        $('.g3').css('display', 'block');
+    }
+    
     
    var $skillbar = $(".skillbar");
+    var current = $window.scrollTop(),
+           target = $("#skillset").offset().top - 50;
     
-    $skillbar.each(function() {
-        $(this).animate({
-            width: $(this).data("percent")
+    $(function() {
+        function load() {
+            $skillbar.each(function() {
+                $(this).animate({
+                    width: $(this).data("percent")
+                });
+            });
+        };
+        
+        $(document).bind('scroll', function(ev) {
+        var scrollOff = $(document).scrollTop();
+        var containerOff = $("#skillset").offset().top +  50 - window.innerHeight;
+        
+        if (scrollOff > containerOff) {
+                load();
+                $(document).unbind('scroll');
+            }
         });
     });
+    
+    
     
     var currentIndex = 0,
         $items = $('#slider .pdf'),
@@ -49,6 +89,21 @@ $(document).ready(function() {
         }
         showItem();
     });
+    
+    $(function() {
+      $('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+  });
+});
     
     
 });
